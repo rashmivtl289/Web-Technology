@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function v(){
+        var str=prompt("Enter a string");
+        str=str.toLowerCase();
+        l=str.length;
+        //document.write(l);
+        //var a=[];
+        //document.write(str[0]);
+        if(l>0){
+        for(var i=0;i<=l;i++){
+            //document.write(str[i]);
+            if(str[i]=="i" || str[i]=="a" || str[i]=="e" || str[i]=="o" || str[i]=="u" ){
+                break;
+                //document.write(i);
+
+            }
+        }
+        if(i<l){
+            document.write("possition of left most vowel in string is"+(i+1));
+        }
+        else
+        document.write("There is no vowel in string");
+        }
+    }
+    function reverse(){
+        var rev=0;
+        var n=parseInt(prompt("Enter a number"));
+        //var l=n.length;
+        //if(l>0){
+            while(n!=0){
+                remainder=n%10;
+                n=parseInt(n/10);
+                rev=rev*10+remainder;
+
+
+            }
+                document.write("Reverse string is:"+rev)
+            }
+        
+    
+
+    </script>
+    <h2 onclick="v()">Vowel</h2>
+    <h2 onclick="reverse()">Reverse</h2>
+</body>
+</html>

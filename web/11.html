@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11_prg</title>
+<script src="jquery-3.6.0.min.js"></script>
+<script>
+    $(function(){
+    $("#fi").click(function(){
+        $(".fade").fadeIn(3000);
+
+    });
+    $("#fo").click(function(){
+     $(".fade").fadeOut(3000);
+    });
+    $("#t").click(function(){
+        $(".fade").toggle(3000);
+    });
+    $("#b").click(function()
+    {
+      $("#dv").animate({height:'200px',width:'400px'},1000);
+    });
+    $("#s").click(function()
+    {
+      $("#dv").animate({height:'200px',width:'200px'},1000);
+    });
+
+    });
+</script>
+</head>
+<body>
+    <div class="fade" style="background-color:red;">
+        <p style="color:blanchedalmond">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque impedit in nulla molestiae eveniet eaque expedita, officia minus modi placeat error earum, quisquam velit dolor amet laborum consequuntur ab ipsum!</p>
+    </div>
+        <div class="fade" style="background-color: blue;">
+            <p style="color:yellow;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae dolor, ex libero voluptates nulla dolorem. Quos porro excepturi incidunt dolores rerum iusto tempora voluptatum, alias vero consequatur ea magni nam?</p>
+       </div>
+
+       <button id="fi">FADE IN</button>
+       <button id="fo">FADE OUT</button>
+       <button id="t">TOGGLE</button>
+       <br>
+       <br>
+       <button id="b">AnimateBigger</button>
+       <button id="s">AnimateSmaller</button>
+       <div id="dv" style="background-color:coral;width: 200px;height: 200px;">
+        <!-- <img src="emp.png" id="dv" width="200px" height="100px"> -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, at deleniti vel dolores est numquam dolore, fuga sed libero provident voluptates labore illo in molestias laudantium quis harum enim debitis!</p>
+    </div>
+</body>
+</html>

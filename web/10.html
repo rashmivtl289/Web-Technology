@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>limit</title>
+    <script src="jquery-3.6.0.min.js"></script>
+    <script>
+       $(function(){
+        $("span").text($("#ta").attr('maxlength'));
+        $("#ta").keyup(function(){
+            var l = $(this).attr('maxlength') - $(this).val().length;
+           // $("span").text('80');
+           $("#s").text(l);
+
+        });
+        $("#agree").click(function(){
+         if($(this).is(':checked'))
+         $("#sub").removeAttr('disabled');
+         else
+         $("#sub").attr('disabled','disabled');
+        });
+
+       });
+    </script>
+
+</head>
+<body>
+    <form>
+     <h2>Maximun of <span> 40 </span> Character</h2>
+    <textarea name="ta" id="ta" cols="30" rows="5" maxlength="50"></textarea>
+    <br>
+    <span id="s">15</span>Character(s)remaining
+    <br>
+    <label><input type="checkbox" name="agree" id="agree" >I agree</label>
+    <br>
+    <input type="button" id="sub" value="submit" disabled>
+
+    </form>
+</body>
+</html>
